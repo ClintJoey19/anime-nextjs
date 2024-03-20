@@ -1,10 +1,11 @@
 import React from "react";
+import Container from "./Container";
 
 const Footer = () => {
   return (
-    <div>
-      <footer>Footer</footer>
-    </div>
+    <Container>
+      <footer className="w-[1220px]">Footer</footer>
+    </Container>
   );
 };
 

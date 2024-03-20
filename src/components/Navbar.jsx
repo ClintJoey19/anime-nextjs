@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Container from "./Container";
 import { usePathname } from "next/navigation";
@@ -35,7 +35,9 @@ const Navbar = () => {
     <Container className="h-[10vh]">
       <div className="w-[1220px] max-lg:w-full h-full flex justify-between items-center">
         <div className="font-semibold text-2xl">
-          Blog<span className="text-blue-500 font-extrabold">.</span>
+          <Link href="/">
+            Blog<span className="text-blue-500 font-extrabold">.</span>
+          </Link>
         </div>
 
         <div className="relative">
@@ -63,7 +65,9 @@ const Navbar = () => {
                 <>
                   {isAdmin && (
                     <Link
-                      className={`hover:text-blue-500 transition-colors`}
+                      className={`${
+                        path === "/admin" ? "text-blue-500 font-bold" : ""
+                      } hover:text-blue-500 transition-colors`}
                       href={`/admin`}
                     >
                       Admin
