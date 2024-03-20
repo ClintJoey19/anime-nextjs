@@ -1,10 +1,12 @@
+import React from "react";
 import Container from "@/components/Container";
 
-export default function Home() {
-  // throw new Error("Erro in Home")
+const ContactPage = () => {
   return (
     <Container className="h-[80vh]">
-      <div>HomePage</div>
+      <div>Contact Page</div>
     </Container>
   );
-}
+};
+
+export default ContactPage;
